@@ -1,3 +1,10 @@
-import { Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { VentasComponent } from './ventas/ventas.component';
 
-export const routes: Routes = [];
+const routes = [
+  { path: '', component: LoginComponent }, // Ruta para el login
+  { path: 'ventas', component: VentasComponent },
+  { path: '**', redirectTo: '' } // Redirigir cualquier otra ruta al login
+];
+
+export default routes;

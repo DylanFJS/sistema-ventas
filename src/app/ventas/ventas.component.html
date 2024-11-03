@@ -1,0 +1,10 @@
+<div class="ventas-container">
+    <h2>Módulo de Ventas</h2>
+    <div *ngFor="let producto of productos">
+      <p>{{ producto.nombre }} - Stock: {{ producto.cantidad }}</p>
+      <input type="number" [(ngModel)]="cantidad" min="1" max="{{ producto.cantidad }}" />
+      <button (click)="agregarProducto(producto)">Agregar</button>
+    </div>
+    <div *ngIf="mensajeError">{{ mensajeError }}</div>
+  </div>
+  
